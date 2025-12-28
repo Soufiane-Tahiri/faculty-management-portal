@@ -1,7 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-
-
+import { Suspense } from 'react';
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import {
@@ -58,7 +57,7 @@ function NavigationCard({
     );
 }
 
-export default function FilieresByDepartment() {
+function FilieresContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const coded = searchParams.get('code');
@@ -72,13 +71,11 @@ export default function FilieresByDepartment() {
             try {
                 if (!coded) return;
 
-                // First fetch the department name
                 const deptResponse = await fetch(`/api/departements/${coded}`);
                 if (!deptResponse.ok) throw new Error('Department not found');
                 const deptData = await deptResponse.json();
                 setDepartmentName(deptData.nom);
 
-                // Then fetch filieres for this department
                 const response = await fetch(`/api/filieres?coded=${coded}`);
                 if (!response.ok) throw new Error('Error retrieving filières');
                 const data = await response.json();
@@ -150,5 +147,21 @@ export default function FilieresByDepartment() {
                 )}
             </div>
         </div>
+    );
+}
+
+
+export default function FilieresByDepartmentPage() {
+    return (
+        <Suspense fallback={
+            <div className="dashboard-container">
+                <div className="loading-state">
+                    <Loader2 className="icon animate-spin" />
+                    <p>Loading page...</p>
+                </div>
+            </div>
+        }>
+            <FilieresContent />
+        </Suspense>
     );
 }

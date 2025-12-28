@@ -1,12 +1,13 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { FiLock, FiAlertCircle, FiArrowLeft, FiCheck } from "react-icons/fi";
 import "../modules/reset-password.css";
 
-export default function ResetPassword() {
+function ResetPasswordContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
@@ -40,7 +41,6 @@ export default function ResetPassword() {
     setError("");
 
     try {
-      // Validate token before making the API call
       if (!token || token.trim() === '') {
         setError("Jeton de réinitialisation manquant ou invalide");
         setIsLoading(false);
@@ -73,11 +73,11 @@ export default function ResetPassword() {
   return (
     <div className="main-container">
       <div className="logo-container">
-        <Image 
-          src="/logo-2.png" 
-          alt="Faculty Management Logo" 
-          width={120} 
-          height={120} 
+        <Image
+          src="/logo-2.png"
+          alt="Faculty Management Logo"
+          width={120}
+          height={120}
           className="logo-image"
         />
       </div>
@@ -167,5 +167,13 @@ export default function ResetPassword() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function ResetPasswordPage() {
+  return (
+    <Suspense fallback={<div className="text-center p-10">Chargement...</div>}>
+      <ResetPasswordContent />
+    </Suspense>
   );
 }

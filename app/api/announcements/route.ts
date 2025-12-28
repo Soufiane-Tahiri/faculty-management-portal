@@ -4,6 +4,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/app/lib/auth';
 import { writeFile, mkdir } from 'fs/promises';
 import { join, dirname } from 'path';
+// @ts-ignore
 import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
 
