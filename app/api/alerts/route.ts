@@ -1,6 +1,8 @@
 import prisma from "../../lib/db";
 import { NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const alerts = await prisma.alert.findMany({
@@ -63,6 +65,7 @@ export async function DELETE(request: Request) {
     );
   }
 }
+
 export async function PUT(request: Request) {
   try {
     const { id, title, description, type } = await request.json();
