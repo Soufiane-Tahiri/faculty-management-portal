@@ -1,6 +1,8 @@
 # Faculty Management System
 
 A modern faculty management web application built with **Next.js**, **Prisma**, and **PostgreSQL**.
+## 🚀 Live Demo
+**Preview Link:** [Click Here to Open App]([https://your-project-name.vercel.app](https://faculty-management-portal-git-main-soufianes-projects-3c1a9302.vercel.app))
 
 ## 🚀 Features
 
