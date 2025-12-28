@@ -75,7 +75,6 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link href="/">
-            <img src="/logo-2.png" alt="Faculté Des Sciences Logo" />
             <span>Faculté Des Sciences</span>
           </Link>
         </div>
