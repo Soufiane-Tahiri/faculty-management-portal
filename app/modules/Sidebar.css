@@ -1,15 +1,3 @@
-:root {
-  --primary-color: #315277;
-  --secondary-color: #3498db;
-  --accent-color: #2980b9;
-  --text-color: #333;
-  --light-bg: #f5f8fa;
-  --error-color: #e74c3c;
-  --success-color: #27ae60;
-  --border-radius: 8px;
-  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-}
 
 .sidebar {
   position: fixed;
