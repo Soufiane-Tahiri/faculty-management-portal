@@ -1,0 +1,154 @@
+/* Global CSS Variables - Consolidated from all modules */
+:root {
+  /* Academic color palette */
+  --primary-color: #1a3a5f; /* Darker blue - represents authority and professionalism */
+  --secondary-color: #3a6ea5; /* Medium blue - represents knowledge and trust */
+  --accent-color: #004d99; /* Rich blue - for emphasis */
+  --tertiary-color: #6c8ebf; /* Lighter blue - for subtle elements */
+  --gold-accent: #b8860b; /* Gold accent - represents achievement and excellence */
+
+  /* Text and background colors */
+  --text-color: #333333;
+  --text-secondary: #555555;
+  --dark-text: #2c3e50;
+  --medium-text: #7f8c8d;
+  --light-text: #bdc3c7;
+  --light-bg: #f5f8fa;
+  --card-bg: #ffffff;
+  --white: #ffffff;
+
+  /* Status colors */
+  --error-color: #e74c3c;
+  --success-color: #27ae60;
+  --light-accent: #f1c40f; /* Gold - for highlights */
+
+  /* UI elements */
+  --border-radius: 8px;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+  --animation-fadeIn: fadeIn 0.5s ease-in-out forwards;
+
+  /* Form elements */
+  --input-bg: #f8fafc;
+  --input-border: #d1d5db;
+  --input-focus-border: #3a6ea5;
+  --input-focus-shadow: rgba(58, 110, 165, 0.2);
+  --button-hover: #004d99;
+
+  /* Font settings */
+  --font-primary: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  --font-secondary: 'Georgia', 'Times New Roman', serif;
+
+  /* Sidebar */
+  --sidebar-width: 250px;
+  --sidebar-collapsed-width: 60px;
+}
+
+/* Global Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Global Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--secondary-color);
+  }
+}
+
+/* Global Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+/* Global Link Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global Button Reset */
+button {
+  font-family: inherit;
+}
+
+/* Global Input Styles */
+input, select, textarea {
+  font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+/* Utility Classes */
+.fadeIn {
+  animation: var(--animation-fadeIn);
+}
+

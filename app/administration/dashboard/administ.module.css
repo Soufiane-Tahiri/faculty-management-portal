@@ -76,11 +76,6 @@
 
 
 
-body {
-  margin: 0;
-  overflow: hidden;
-}
-
 .card:nth-child(1) { animation-delay: 0.1s; }
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
@@ -129,32 +124,6 @@ body {
   }
 }
 
-/* Root variables and animations */
-:root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #2980b9;
-  --text-color: #333;
-  --light-bg: #f5f8fa;
-  --error-color: #e74c3c;
-  --success-color: #27ae60;
-  --border-radius: 8px;
-  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-  --sidebar-width: 250px;
-  --sidebar-collapsed-width: 60px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* Sidebar hover effect */
 .sidebar:hover ~ .container {
