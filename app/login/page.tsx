@@ -31,20 +31,34 @@ export default function Login() {
     };
   }, []);
 
-  const redirect_Role = (role: string) => {
-    switch (role) {
-      case "admin":
-        window.location.href = "/admin/dashboard";
-        break;
-      case "dean":
-        window.location.href = "/dean/dashboard";
+const redirect_Role = (role: string) => {
+    // 1. Normalize to lowercase to match any DB format (Admin, ADMIN, admin)
+    const normalizedRole = role.toLowerCase();
 
+    switch (normalizedRole) {
+      case "admin":
+      case "dean": // Handles both if you used DEAN in seed
+        router.push("/dean/dashboard"); // Or /admin/dashboard
         break;
+
+      case "professor":
+      case "teacher":
+        // 2. Point to a page that actually exists (or create this folder)
+        router.push("/dean/dashboard"); // TEMPORARY: Redirect to Dean dashboard until Prof dashboard exists
+        // router.push("/professor/dashboard"); // <-- Uncomment when you create the page
+        break;
+
+      case "student":
+        router.push("/etudiants"); // Point to your existing students page
+        break;
+
       case "administration":
-        window.location.href = "/administration/dashboard";
+        router.push("/administration/dashboard");
         break;
+
       default:
-        router.push("./app");
+        router.push("/");
+        break;
     }
     router.refresh();
   };
