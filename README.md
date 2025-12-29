@@ -8,7 +8,7 @@ Use these accounts to test the different user roles without waiting for approval
 
 | Role | Email | Password | Access Level |
 | :--- | :--- | :--- | :--- |
-| Admin** | `admin@faculty.com` | `123456` | Full System Control, User Approvals, Department Management |
+| Admin** | `admin@faculty.com` | `1234567@` | Full System Control, User Approvals, Department Management |
 
 ---
 
