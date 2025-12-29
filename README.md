@@ -3,6 +3,16 @@
 A modern faculty management web application built with **Next.js**, **Prisma**, and **PostgreSQL**.
 ## 🚀 Live Demo
 **Preview Link:** [Click Here to Open App](https://faculty-management-portal-git-main-soufianes-projects-3c1a9302.vercel.app)
+### 🔑 Demo Credentials (Pre-Approved)
+Use these accounts to test the different user roles without waiting for approval:
+
+| Role | Email | Password | Access Level |
+| :--- | :--- | :--- | :--- |
+| **Dean / Admin** | `admin@faculty.com` | `123456` | Full System Control, User Approvals, Department Management |
+| **Professor** | `prof@faculty.com` | `123456` | Module Management, Grading, Student Oversight |
+| **Student** | `student@faculty.com` | `123456` | View Grades, Schedule, Request Documents |
+
+---
 
 ## 🚀 Features
 
