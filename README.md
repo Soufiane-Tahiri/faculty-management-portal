@@ -9,8 +9,6 @@ Use these accounts to test the different user roles without waiting for approval
 | Role | Email | Password | Access Level |
 | :--- | :--- | :--- | :--- |
 | **Dean / Admin** | `admin@faculty.com` | `123456` | Full System Control, User Approvals, Department Management |
-| **Professor** | `prof@faculty.com` | `123456` | Module Management, Grading, Student Oversight |
-| **Student** | `student@faculty.com` | `123456` | View Grades, Schedule, Request Documents |
 
 ---
 
