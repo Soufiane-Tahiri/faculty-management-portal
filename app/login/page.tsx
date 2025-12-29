@@ -38,13 +38,12 @@ export default function Login() {
         break;
       case "dean":
         window.location.href = "/dean/dashboard";
-
         break;
       case "administration":
         window.location.href = "/administration/dashboard";
         break;
       default:
-        router.push("./login");
+        router.push("/");
     }
     router.refresh();
   };
